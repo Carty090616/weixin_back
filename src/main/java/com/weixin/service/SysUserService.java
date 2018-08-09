@@ -26,6 +26,14 @@ public class SysUserService {
     @Autowired
     private SysUserMapper sysUserMapper;
 
+    /**
+     * <查询全部>
+     *
+     * @param
+     * @return java.util.List<com.weixin.model.SysUser>
+     * @author Lifeifei
+     * @date 2018/8/9 9:03
+     */
     public List<SysUser> selectAll(){
         return sysUserMapper.selectAll();
     }

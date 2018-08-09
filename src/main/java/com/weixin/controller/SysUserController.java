@@ -29,13 +29,16 @@ public class SysUserController {
     @Autowired
     private SysUserService sysUserService;
 
+    /**
+     * <查询全部>
+     *
+     * @param 
+     * @return java.util.List<com.weixin.model.SysUser>
+     * @author Lifeifei
+     * @date 2018/8/9 9:23 
+     */
     @PostMapping("/select")
     public List<SysUser> selectAll(){
         return sysUserService.selectAll();
-    }
-
-    @PostMapping("/test")
-    public String test(){
-        return "success";
     }
 }

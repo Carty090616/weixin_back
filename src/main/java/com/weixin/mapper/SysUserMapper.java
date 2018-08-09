@@ -7,6 +7,8 @@
 package com.weixin.mapper;
 
 import java.util.List;
+
+import com.weixin.mapper.base.MyBaseMapper;
 import com.weixin.model.SysUser;
 
 /**
@@ -16,7 +18,7 @@ import com.weixin.model.SysUser;
  * @create 2018/8/5
  * @since 1.0.0
  */
-public interface SysUserMapper {
+public interface SysUserMapper extends MyBaseMapper {
 
     List<SysUser> selectAll();
 }
