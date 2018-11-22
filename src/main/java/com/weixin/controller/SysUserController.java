@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,6 +40,25 @@ public class SysUserController {
      */
     @PostMapping("/select")
     public List<SysUser> selectAll(){
-        return sysUserService.selectAll();
+        List<SysUser> list = new ArrayList<>();
+
+        SysUser user1 = new SysUser();
+        user1.setId(1);
+        user1.setName("name1");
+        user1.setRemark("remark1");
+        SysUser user2 = new SysUser();
+        user2.setId(2);
+        user2.setName("name2");
+        user2.setRemark("remark2");
+        SysUser user3 = new SysUser();
+        user3.setId(3);
+        user3.setName("name3");
+        user3.setRemark("remark3");
+
+        list.add(user1);
+        list.add(user2);
+        list.add(user3);
+
+        return list;
     }
 }
